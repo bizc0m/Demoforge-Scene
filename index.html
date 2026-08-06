@@ -4,207 +4,76 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DemoForge Scene</title>
-  <meta name="description" content="Hub DemoForge Scene : studio principal, ANSI Motion et previews shader.">
-  <style>
-    :root {
-      --bg: #08080b;
-      --panel: #111118;
-      --panel-2: #171722;
-      --text: #f4f4f7;
-      --muted: #aaaab8;
-      --line: #2b2b39;
-      --red: #ff2a1f;
-      --cyan: #4ff3ff;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background:
-        linear-gradient(135deg, rgba(255, 42, 31, .18), transparent 28%),
-        radial-gradient(circle at 82% 18%, rgba(79, 243, 255, .13), transparent 32%),
-        var(--bg);
-      color: var(--text);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      line-height: 1.5;
-    }
-
-    main {
-      width: min(1080px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: clamp(32px, 7vw, 88px) 0;
-    }
-
-    header {
-      display: grid;
-      gap: 18px;
-      margin-bottom: 30px;
-      border-bottom: 1px solid var(--line);
-      padding-bottom: 28px;
-    }
-
-    .kicker {
-      color: var(--cyan);
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      font-weight: 900;
-      font-size: .78rem;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(3rem, 10vw, 7.4rem);
-      line-height: .84;
-      letter-spacing: -.06em;
-      text-transform: uppercase;
-    }
-
-    .lead {
-      max-width: 760px;
-      margin: 0;
-      color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.25rem);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-    }
-
-    .card {
-      display: flex;
-      min-height: 280px;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 28px;
-      padding: 22px;
-      background: linear-gradient(180deg, var(--panel-2), var(--panel));
-      border: 1px solid var(--line);
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .card:hover {
-      border-color: var(--red);
-      transform: translateY(-2px);
-    }
-
-    .card strong {
-      display: block;
-      color: var(--red);
-      font-size: .78rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .card h2 {
-      margin: 10px 0 12px;
-      font-size: clamp(1.35rem, 3vw, 2.1rem);
-      line-height: 1;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .open {
-      display: inline-flex;
-      width: fit-content;
-      align-items: center;
-      gap: 8px;
-      color: var(--text);
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-size: .8rem;
-    }
-
-    .tools {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 18px;
-    }
-
-    .tools a {
-      display: inline-flex;
-      min-height: 42px;
-      align-items: center;
-      border: 1px solid var(--line);
-      padding: 10px 13px;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: .82rem;
-      font-weight: 800;
-    }
-
-    .tools a:hover {
-      color: var(--text);
-      border-color: var(--cyan);
-    }
-
-    footer {
-      margin-top: 34px;
-      color: #777786;
-      font-size: .82rem;
-    }
-
-    @media (max-width: 860px) {
-      .grid { grid-template-columns: 1fr; }
-      .card { min-height: 210px; }
-    }
-  </style>
+  <meta name="description" content="DemoForge Scene regroupe trois outils web pour créer, animer et exporter des scènes demoscene directement dans le navigateur.">
+  <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
-  <main>
-    <header>
-      <div class="kicker">GitHub Pages hub</div>
-      <h1>DemoForge Scene</h1>
-      <p class="lead">Accueil stable pour ouvrir les pages HTML du dépôt. Le studio principal reste disponible dans une page dédiée pour éviter que l'accueil se bloque sur un état local.</p>
-    </header>
+  <a class="skip-link" href="#main">Aller au contenu</a>
 
-    <section class="grid" aria-label="Pages disponibles">
-      <a class="card" href="DemoForge_Studio.html?reset=1">
-        <span>
-          <strong>Studio principal</strong>
-          <h2>DemoForge Studio</h2>
-          <p>Version complète de l'application. Ouverture avec reset pour éviter les blocages liés au localStorage.</p>
-        </span>
-        <span class="open">Ouvrir</span>
-      </a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="DemoForge Scene">
+      <span class="brand-mark">DF</span>
+      <span>DemoForge Scene</span>
+    </a>
+    <nav class="top-nav" aria-label="Navigation principale">
+      <a href="tools/studio.html">Studio</a>
+      <a href="tools/ansi-motion.html">ANSI Motion</a>
+      <a href="tools/shader-previews.html">Shader</a>
+      <a href="https://github.com/bizc0m/Demoforge-Scene">GitHub</a>
+    </nav>
+  </header>
 
-      <a class="card" href="DemoForge_ANSI_Motion.html">
-        <span>
-          <strong>Motion</strong>
-          <h2>ANSI Motion</h2>
-          <p>Page dédiée aux exports et animations ANSI.</p>
-        </span>
-        <span class="open">Ouvrir</span>
-      </a>
-
-      <a class="card" href="demoforge_shader_v0_6_1_real_previews.html">
-        <span>
-          <strong>Shader</strong>
-          <h2>Real Previews</h2>
-          <p>Prévisualisations shader v0.6.1.</p>
-        </span>
-        <span class="open">Ouvrir</span>
-      </a>
+  <main id="main">
+    <section class="hero">
+      <p class="eyebrow">Browser demoscene toolkit</p>
+      <h1>Créer des scènes, tester des effets, exporter des démos.</h1>
+      <p class="hero-copy">Un hub GitHub Pages stable pour ouvrir chaque outil DemoForge sans dépendance serveur.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="tools/studio.html">Ouvrir le Studio</a>
+        <a class="button" href="tools/ansi-motion.html">Voir les outils</a>
+      </div>
     </section>
 
-    <nav class="tools" aria-label="Liens de secours">
-      <a href="DemoForge_Studio.html">Studio sans reset</a>
-      <a href="DemoForge_Studio.html?reset=1">Studio reset</a>
-      <a href="https://github.com/bizc0m/Demoforge-Scene">Dépôt GitHub</a>
-    </nav>
+    <section class="tool-grid" aria-label="Outils DemoForge">
+      <article class="tool-card">
+        <p class="tool-kicker">Composition</p>
+        <h2>DemoForge Studio</h2>
+        <p>Editeur principal pour assembler des calques texte, FX, images, HTML, vidéo et audio puis exporter une scène autonome.</p>
+        <a class="card-link" href="tools/studio.html">Page outil</a>
+      </article>
 
-    <footer>
-      Les fichiers HTML restent accessibles directement par leur URL GitHub Pages.
-    </footer>
+      <article class="tool-card">
+        <p class="tool-kicker">Motion</p>
+        <h2>ANSI Motion</h2>
+        <p>Pipeline visuel pour transformer image ou vidéo en rendus ANSI, glitch, trames et exports compacts.</p>
+        <a class="card-link" href="tools/ansi-motion.html">Page outil</a>
+      </article>
+
+      <article class="tool-card">
+        <p class="tool-kicker">Shader</p>
+        <h2>Real Previews</h2>
+        <p>Bibliothèque de shaders WebGL avec aperçus live, paramètres éditables, mutation et export HTML.</p>
+        <a class="card-link" href="tools/shader-previews.html">Page outil</a>
+      </article>
+    </section>
+
+    <section class="status-panel" aria-label="Etat du projet">
+      <div>
+        <h2>Format actuel</h2>
+        <p>Les outils restent des fichiers HTML autonomes. Les pages de présentation ajoutent une navigation claire, des liens de secours et une documentation d'usage sans modifier les runtimes.</p>
+      </div>
+      <ul class="check-list">
+        <li>Publication statique GitHub Pages</li>
+        <li>Aucune installation requise pour utiliser les outils</li>
+        <li>Reset disponible pour contourner un état local corrompu</li>
+      </ul>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <span>DemoForge Scene</span>
+    <a href="README.md">README</a>
+    <a href="docs/architecture.md">Architecture</a>
+  </footer>
 </body>
 </html>

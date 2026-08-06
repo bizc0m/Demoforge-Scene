@@ -1,0 +1,10 @@
+{
+  "name": "demoforge-scene",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static browser hub for DemoForge Scene tools.",
+  "scripts": {
+    "test": "node tests/smoke.mjs"
+  },
+  "devDependencies": {}
+}
