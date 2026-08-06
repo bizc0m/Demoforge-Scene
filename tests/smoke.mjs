@@ -5,9 +5,6 @@ import { extname, join, normalize, resolve } from 'node:path';
 const root = resolve(new URL('..', import.meta.url).pathname);
 const pages = [
   '/',
-  '/tools/studio.html',
-  '/tools/ansi-motion.html',
-  '/tools/shader-previews.html',
   '/DemoForge_Studio.html?reset=1',
   '/DemoForge_ANSI_Motion.html',
   '/demoforge_shader_v0_6_1_real_previews.html'

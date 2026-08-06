@@ -1,6 +1,6 @@
 # DemoForge Scene
 
-DemoForge Scene is a static browser toolkit for demoscene-style creation.
+DemoForge Scene is a single-page static hub for demoscene-style browser tools.
 
 Public entry point:
 
@@ -30,11 +30,7 @@ DemoForge_Studio.html?reset=1
 ## Structure
 
 ```text
-index.html                                      Hub
-tools/studio.html                              Studio presentation page
-tools/ansi-motion.html                         ANSI Motion presentation page
-tools/shader-previews.html                     Shader presentation page
-assets/site.css                                Shared site styles
+index.html                                      Single demoscene hub
 DemoForge_Studio.html                          Studio runtime
 DemoForge_ANSI_Motion.html                     ANSI Motion runtime
 demoforge_shader_v0_6_1_real_previews.html     Shader runtime

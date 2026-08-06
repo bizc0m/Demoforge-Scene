@@ -1,16 +1,14 @@
 # Architecture
 
-DemoForge Scene is organized as a static site around three standalone browser tools.
+DemoForge Scene is organized as one static hub around three standalone browser tools.
 
 ## Site Layer
 
-The site layer provides navigation, documentation and stable entry points:
+The site layer provides one public entry point:
 
-- `index.html` is the public hub.
-- `tools/*.html` gives one descriptive page per tool.
-- `assets/site.css` contains shared layout and visual styling.
+- `index.html` is the public hub and links directly to each runtime.
 
-This layer should stay small and easy to review.
+This layer should stay small, direct and easy to review.
 
 ## Runtime Layer
 
